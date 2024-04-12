@@ -1,0 +1,201 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+.container {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header {
+    background-color: blue;
+    color: #fff;
+    font-weight: normal;
+}
+
+header div {
+    padding: 16px 0;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1{
+    font-style: italic;
+}
+
+header li {
+    display: inline;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+header li a {
+    color: #f5f6fa;
+    text-decoration: none;
+    margin-left: 16px;
+}
+
+.container-flex {
+    display: flex;
+}
+
+.sobre-a-loja,
+#produtos>h2 {
+    margin-top: 46px;
+}
+
+.sobre-a-loja {
+    width: 100%;
+}
+
+.sobre-a-loja article {
+    position: relative;
+    margin-left: 46px;
+}
+
+.titulo {
+    border-bottom: 1px solid blue;
+    color: blue;
+    font-style: italic;
+    font-size: 2em;
+    margin-bottom: 36px;
+    padding-bottom: 24px;
+}
+
+.grade-produtos img,
+.grade-produtos button {
+    width: 100%;
+}
+
+.grade-produtos {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    column-gap: 2%;
+    row-gap: 1%;
+    width: 100%;
+    font-size: 1em;
+}
+
+.grade-produtos button {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: blue;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1em;
+    cursor: pointer;
+    border: none;
+    border-radius: 2px;
+}
+
+.grade-produtos button:hover {
+    background-color: rgb(116, 191, 234);
+}
+
+.grade-produtos h2 {
+    margin: 10px 0;
+}
+
+.produto {
+    width: 100%;
+    height: auto;
+    display: grid;
+    gap: 1rem;
+}
+
+.produto img{
+    width: 100%;
+    margin-bottom: 26px;
+}
+
+.produto img:hover {
+    border: 3px solid rgba(0, 0, 255, 0.218);
+    border-radius: 8px;
+    transform: scale(1.2)rotate(2deg) ;
+}
+
+.clear {
+    clear: both;
+}
+
+@media screen and (max-width: 763px) {
+    .container {
+        width: 90%;
+    }
+
+    .container-flex {
+        display: block;
+    }
+
+
+    header li {
+        display: block;
+    }
+
+    header>.container-flex {
+        display: flex;
+
+    }
+
+    .sobre-a-loja article {
+        margin-left: 0px;
+    }
+
+    .sobre-a-loja img {
+        width: 100%;
+    }
+
+    .titulo {
+        margin-top: 24px;
+    }
+
+    .grade-produtos {
+        grid-template-columns: auto;
+    }
+    .produto img:hover {
+        border: 0;
+        transform: none ;
+    }
+}
+
+@media screen and (min-width: 764px) and (max-width: 1023px) {
+    .container {
+        width: 90%;
+    }
+
+    .container-flex {
+        display: block;
+    }
+    header>.container-flex {
+        display: flex;
+
+    }
+
+    .sobre-a-loja img {
+        width: 100%;
+    }
+    .titulo {
+        margin-top: 24px;
+    }
+
+    .sobre-a-loja article {
+        margin-left: 0px;
+    }
+
+    .grade-produtos {
+        grid-template-columns: auto auto;
+    }
+
+    .grade-produtos img {
+        margin-top: 16px;
+    }
+    .produto img:hover {
+        border: 0;
+        transform: none ;
+    }
+}
